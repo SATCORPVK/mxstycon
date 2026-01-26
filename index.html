@@ -1,345 +1,365 @@
+<!-- index.html -->
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Kambo Kustoms | Custom Truck Builds & Auto Repair — Sutherland Springs, TX</title>
-  <meta name="description" content="Custom truck builds and auto repair in Sutherland Springs, TX. Mild to wild. Call or text to book service." />
-  <meta name="theme-color" content="#0b0f14" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Kambo Kustoms | Custom Truck Builds & Auto Repair</title>
+  <meta name="description" content="Custom truck builds and auto repair in Sutherland Springs, TX. Mild to Wild. Call, text, or request a quote." />
+  <meta name="theme-color" content="#07090c" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Top Bar -->
-  <header class="topbar" id="top">
-    <div class="wrap topbar__inner">
-      <div class="brand">
-        <div class="brand__mark" aria-hidden="true">KK</div>
-        <div class="brand__text">
-          <div class="brand__name">Kambo Kustoms</div>
-          <div class="brand__tag">Custom Truck Builds • Auto Repair</div>
-        </div>
-      </div>
-
-      <nav class="nav" aria-label="Primary">
-        <a href="#services">Services</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-      </nav>
-
-      <div class="topbar__cta">
-        <a class="btn btn--ghost" href="tel:+18159551895" aria-label="Call Kambo Kustoms">(815) 955-1895</a>
-        <a class="btn btn--primary" href="#contact">Get a Quote</a>
+<header class="header" id="top">
+  <div class="wrap header__inner">
+    <div class="logo">
+      <div class="logo__text">
+        <div class="logo__name">Kambo Kustoms</div>
+        <div class="logo__tag">Custom Truck Builds • Auto Repair • Mild to Wild</div>
       </div>
     </div>
-  </header>
 
-  <!-- Hero -->
-  <main>
-    <section class="hero">
-      <div class="wrap hero__grid">
-        <div class="hero__copy">
-          <div class="pill">
-            <span class="dot" aria-hidden="true"></span>
-            <span>Local shop • Sutherland Springs, TX</span>
+    <nav class="nav" aria-label="Primary">
+      <a href="#services">Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#quote">Request a Quote</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="header__cta">
+      <a class="btn btn--ghost" href="sms:+18159551895">Text</a>
+      <a class="btn btn--primary" href="tel:+18159551895">Call</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- HERO -->
+  <section class="hero">
+    <div class="wrap hero__grid">
+      <div class="hero__copy">
+        <div class="chip">
+          <span class="chip__dot" aria-hidden="true"></span>
+          <span>Sutherland Springs, TX • Mon–Fri 8–5 • Sat 8–6</span>
+        </div>
+
+        <h1>
+          Built <span class="accent">Mild to Wild</span>.<br />
+          Trucks, customs, and repairs done right.
+        </h1>
+
+        <p class="lead">
+          Custom builds, suspension, steering, diagnostics, brakes, AC and more.
+          Fast communication. Clean work. No nonsense.
+        </p>
+
+        <div class="hero__actions">
+          <a class="btn btn--primary btn--lg" href="tel:+18159551895">Call (815) 955-1895</a>
+          <a class="btn btn--ghost btn--lg" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20Vehicle%3A%20(Year%20Make%20Model)%20%0AService%3A%20%0ADetails%3A%20">Text Us</a>
+          <a class="btn btn--soft btn--lg" href="#quote">Request a Quote</a>
+        </div>
+
+        <div class="hero__meta">
+          <div class="metaCard">
+            <div class="metaCard__k">Address</div>
+            <div class="metaCard__v">7696 FM539, Sutherland Springs, TX 78161</div>
+          </div>
+          <div class="metaCard">
+            <div class="metaCard__k">Shop Focus</div>
+            <div class="metaCard__v">Custom builds • Lift kits • Suspension • Diagnostics</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__media">
+        <div class="mediaFrame">
+          <div class="mediaFrame__top">
+            <span class="pulseDot" aria-hidden="true"></span>
+            <span class="mono">FEATURED BUILDS</span>
+          </div>
+          <div class="mediaGrid" aria-label="Photo placeholders">
+            <div class="ph ph--tall">Truck on lift</div>
+            <div class="ph">Custom wheels</div>
+            <div class="ph">Shop bay</div>
+            <div class="ph">Detail work</div>
+          </div>
+          <div class="mediaFrame__hint">Swap these with real Google photos in 5 minutes.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Services</h2>
+        <p>Don’t see it listed? Ask — custom work is what we do.</p>
+      </div>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Custom Builds</h3>
+          <p>Vision-to-reality upgrades, mild to wild builds, and custom solutions.</p>
+          <ul>
+            <li>Lift kits & suspension</li>
+            <li>Fitment guidance</li>
+            <li>Custom fabrication / installs (as quoted)</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Steering & Suspension</h3>
+          <p>Ride quality, handling, and front-end stability.</p>
+          <ul>
+            <li>Ball joints / tie rods</li>
+            <li>Shocks / struts</li>
+            <li>Front-end checks</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Engine Diagnostics</h3>
+          <p>Find the problem fast. Fix it right.</p>
+          <ul>
+            <li>Check-engine lights</li>
+            <li>Performance issues</li>
+            <li>Electrical troubleshooting</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Brakes & Safety</h3>
+          <p>Stopping power you can trust.</p>
+          <ul>
+            <li>Pads / rotors</li>
+            <li>Brake checks</li>
+            <li>Safety inspection</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>AC & Cooling</h3>
+          <p>Texas-heat ready service.</p>
+          <ul>
+            <li>AC diagnosis</li>
+            <li>Recharge / leaks</li>
+            <li>Cooling system checks</li>
+          </ul>
+        </article>
+
+        <article class="card">
+          <h3>Maintenance</h3>
+          <p>Basic upkeep for long-term reliability.</p>
+          <ul>
+            <li>Oil changes</li>
+            <li>Batteries</li>
+            <li>Air & cabin filters</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section id="gallery" class="section section--dark">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Gallery</h2>
+        <p>Real builds, real results. (Replace with your best photos.)</p>
+      </div>
+
+      <div class="masonry">
+        <div class="tile tile--lg">Featured truck</div>
+        <div class="tile">Custom detail</div>
+        <div class="tile">Shop bay</div>
+        <div class="tile">Lift kit</div>
+        <div class="tile tile--wide">Before / After</div>
+        <div class="tile">Wheels</div>
+      </div>
+
+      <div class="center">
+        <a class="btn btn--soft" target="_blank" rel="noopener"
+           href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX">
+          View photos on Google
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- REQUEST A QUOTE -->
+  <section id="quote" class="section">
+    <div class="wrap">
+      <div class="section__head">
+        <h2>Request a Quote</h2>
+        <p>Fill this out and we’ll reach back out. (For the preview site, this can email/text you later.)</p>
+      </div>
+
+      <div class="quoteGrid">
+        <form class="form" action="#" method="post" onsubmit="return handleQuote(event)">
+          <div class="form__row">
+            <label>
+              Name
+              <input required name="name" autocomplete="name" placeholder="Your name" />
+            </label>
+            <label>
+              Phone
+              <input required name="phone" inputmode="tel" autocomplete="tel" placeholder="(###) ###-####" />
+            </label>
           </div>
 
-          <h1>Custom truck builds & reliable auto repair — <span class="accent">Mild to Wild.</span></h1>
+          <div class="form__row">
+            <label>
+              Vehicle (Year / Make / Model)
+              <input required name="vehicle" placeholder="2015 Chevy Silverado" />
+            </label>
+          </div>
 
-          <p class="lead">
-            From suspension and steering to diagnostics and custom work, we build it clean, strong, and right.
-            Fast communication. Quality results.
+          <div class="form__row">
+            <label>
+              Service Needed
+              <select required name="service">
+                <option value="" selected disabled>Select a service</option>
+                <option>Custom Build</option>
+                <option>Lift Kit / Suspension</option>
+                <option>Steering & Suspension Repair</option>
+                <option>Engine Diagnostics</option>
+                <option>Brakes</option>
+                <option>AC / Cooling</option>
+                <option>Maintenance</option>
+                <option>Other</option>
+              </select>
+            </label>
+          </div>
+
+          <div class="form__row">
+            <label>
+              Details
+              <textarea required name="details" rows="5" placeholder="Tell us what’s going on, what you want done, and any timeframe."></textarea>
+            </label>
+          </div>
+
+          <div class="form__row form__row--actions">
+            <button class="btn btn--primary" type="submit">Send Request</button>
+            <a class="btn btn--ghost" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20Name%3A%20%0AVehicle%3A%20(Year%20Make%20Model)%20%0AService%3A%20%0ADetails%3A%20">
+              Or text this instead
+            </a>
+          </div>
+
+          <p class="form__note">
+            For launch: connect this form to email or a simple inbox. For now it opens a pre-filled text message.
           </p>
+        </form>
 
-          <div class="hero__actions">
-            <a class="btn btn--primary btn--lg" href="tel:+18159551895">Call Now</a>
-            <a class="btn btn--ghost btn--lg" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20I%20need%20help%20with%20(my%20vehicle)%3A%20">Text Us</a>
-            <a class="btn btn--soft btn--lg" href="#services">View Services</a>
+        <aside class="panel">
+          <div class="panel__title">Fastest way to get a quote</div>
+          <ol class="panel__steps">
+            <li>Send Year/Make/Model</li>
+            <li>Tell us the service you want</li>
+            <li>Share photos if you have them</li>
+          </ol>
+          <div class="panel__cta">
+            <a class="btn btn--soft" href="tel:+18159551895">Call</a>
+            <a class="btn btn--ghost" href="sms:+18159551895">Text</a>
           </div>
-
-          <div class="meta">
-            <div class="meta__item">
-              <div class="meta__k">Hours</div>
-              <div class="meta__v">Mon–Fri 8–5 • Sat 8–6</div>
-            </div>
-            <div class="meta__item">
-              <div class="meta__k">Location</div>
-              <div class="meta__v">7696 FM539, Sutherland Springs, TX 78161</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="hero__card">
-          <div class="hero__media">
-            <div class="hero__mediaLabel">Showcase</div>
-            <div class="hero__mediaGrid">
-              <!-- Replace these with real photo URLs later -->
-              <figure class="ph ph--tall" aria-label="Truck on lift photo placeholder"></figure>
-              <figure class="ph" aria-label="Custom truck photo placeholder"></figure>
-              <figure class="ph" aria-label="Shop photo placeholder"></figure>
-              <figure class="ph" aria-label="Custom build photo placeholder"></figure>
-            </div>
-            <p class="hero__note">
-              Tip: we can pull your best photos from Google to make this gallery real fast.
-            </p>
-          </div>
-
-          <div class="hero__quick">
-            <div class="q">
-              <div class="q__k">Call</div>
-              <a class="q__v" href="tel:+18159551895">(815) 955-1895</a>
-            </div>
-            <div class="q">
-              <div class="q__k">Text</div>
-              <a class="q__v" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20I%20need%20help%20with%20(my%20vehicle)%3A%20">Message us</a>
-            </div>
-            <div class="q">
-              <div class="q__k">Directions</div>
-              <a class="q__v" target="_blank" rel="noopener"
-                 href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX%2078161">
-                Open Maps
-              </a>
-            </div>
-          </div>
-        </div>
+          <div class="panel__fine mono">Mon–Fri 8–5 • Sat 8–6</div>
+        </aside>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Services -->
-    <section class="section" id="services">
-      <div class="wrap">
-        <div class="section__head">
-          <h2>Services</h2>
-          <p>Quick, clear work. If it’s not listed, ask — custom is what we do.</p>
+  <!-- CONTACT -->
+  <section id="contact" class="section section--dark">
+    <div class="wrap contact">
+      <div class="contact__left">
+        <h2>Contact</h2>
+        <p class="lead">Call, text, or request a quote. We’ll get you squared away.</p>
+
+        <div class="contact__cards">
+          <div class="mini">
+            <div class="mini__k">Phone</div>
+            <a class="mini__v" href="tel:+18159551895">(815) 955-1895</a>
+          </div>
+          <div class="mini">
+            <div class="mini__k">Address</div>
+            <div class="mini__v">7696 FM539, Sutherland Springs, TX 78161</div>
+          </div>
+          <div class="mini">
+            <div class="mini__k">Hours</div>
+            <div class="mini__v">Mon–Fri 8–5 • Sat 8–6 • Sun Closed</div>
+          </div>
         </div>
 
-        <div class="grid cards">
-          <article class="card">
-            <h3>Custom Builds</h3>
-            <p>Truck customization, upgrades, and vision-to-reality work — mild to wild.</p>
-            <ul>
-              <li>Lift kits & suspension</li>
-              <li>Wheels/tires fitment guidance</li>
-              <li>Custom solutions</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Steering & Suspension</h3>
-            <p>Handling, stability, and ride quality fixes done right.</p>
-            <ul>
-              <li>Ball joints / tie rods</li>
-              <li>Shocks/struts</li>
-              <li>Front-end inspection</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Engine Diagnostics</h3>
-            <p>Track down issues fast with professional diagnostics.</p>
-            <ul>
-              <li>Check engine light</li>
-              <li>Performance issues</li>
-              <li>Electrical troubleshooting</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Brakes & Safety</h3>
-            <p>Stopping power and safety checks you can trust.</p>
-            <ul>
-              <li>Brake pads/rotors</li>
-              <li>Fluid checks</li>
-              <li>Safety inspection</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>AC / Cooling</h3>
-            <p>Texas heat-ready service to keep you comfortable.</p>
-            <ul>
-              <li>AC diagnosis</li>
-              <li>Recharge / leaks</li>
-              <li>Cooling system checks</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <h3>Maintenance</h3>
-            <p>Simple maintenance for long-term reliability.</p>
-            <ul>
-              <li>Oil changes</li>
-              <li>Battery</li>
-              <li>Air & cabin filters</li>
-            </ul>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- Gallery -->
-    <section class="section section--alt" id="gallery">
-      <div class="wrap">
-        <div class="section__head">
-          <h2>Gallery</h2>
-          <p>Real builds. Real results. (We’ll swap these placeholders for your best shots.)</p>
-        </div>
-
-        <div class="masonry" aria-label="Photo gallery">
-          <!-- Replace the divs with <img src="..."> when you have photos -->
-          <div class="tile tile--lg"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile"></div>
-          <div class="tile tile--wide"></div>
-          <div class="tile"></div>
-        </div>
-
-        <div class="center">
-          <a class="btn btn--soft" target="_blank" rel="noopener"
-             href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX%2078161">
-            See more photos on Google
+        <div class="contact__actions">
+          <a class="btn btn--primary btn--lg" href="tel:+18159551895">Call Now</a>
+          <a class="btn btn--ghost btn--lg" href="sms:+18159551895">Text Us</a>
+          <a class="btn btn--soft btn--lg" target="_blank" rel="noopener"
+             href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX">
+            Directions
           </a>
         </div>
       </div>
-    </section>
 
-    <!-- Reviews -->
-    <section class="section" id="reviews">
-      <div class="wrap">
-        <div class="section__head">
-          <h2>Reviews</h2>
-          <p>What customers are saying.</p>
+      <div class="contact__right">
+        <div class="map">
+          <iframe
+            title="Kambo Kustoms map"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps?q=Kambo%20Kustoms%207696%20FM539%20Sutherland%20Springs%20TX%2078161&output=embed">
+          </iframe>
         </div>
 
-        <div class="grid reviews">
-          <article class="review">
-            <div class="review__stars" aria-hidden="true">★★★★★</div>
-            <p class="review__text">“Very attentive to detail, did an awesome job on my Mustang, would do business with again!! 5 stars”</p>
-            <div class="review__who">— Customer</div>
-          </article>
-
-          <article class="review">
-            <div class="review__stars" aria-hidden="true">★★★★★</div>
-            <p class="review__text">“Very talented does great work.”</p>
-            <div class="review__who">— Customer</div>
-          </article>
-
-          <article class="review review--owner">
-            <div class="review__badge">From the owner</div>
-            <p class="review__text">“Custom truck shop. Award winner builds. Mild to Wild. We specialize in your visions. Come check out our work.”</p>
-          </article>
+        <div class="note">
+          <div class="note__title">Launch upgrades (optional)</div>
+          <ul>
+            <li>Domain + email routing</li>
+            <li>Photo gallery + featured builds</li>
+            <li>Quote form → email inbox / CRM</li>
+            <li>SEO basics (service areas + keywords)</li>
+          </ul>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Contact -->
-    <section class="section section--alt" id="contact">
-      <div class="wrap contact">
-        <div class="contact__left">
-          <h2>Contact</h2>
-          <p class="lead">
-            Call or text for availability and quick quotes. If you can, include your vehicle year/make/model and what you want done.
-          </p>
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© <span id="year"></span> Kambo Kustoms</span>
+      <a href="#top" class="mono">Back to top ↑</a>
+    </div>
+  </footer>
+</main>
 
-          <div class="contact__cards">
-            <div class="mini">
-              <div class="mini__k">Phone</div>
-              <a class="mini__v" href="tel:+18159551895">(815) 955-1895</a>
-            </div>
+<!-- Sticky mobile CTA -->
+<div class="sticky" aria-label="Quick actions">
+  <a class="sticky__btn sticky__btn--call" href="tel:+18159551895">Call</a>
+  <a class="sticky__btn sticky__btn--text" href="sms:+18159551895">Text</a>
+  <a class="sticky__btn sticky__btn--quote" href="#quote">Quote</a>
+</div>
 
-            <div class="mini">
-              <div class="mini__k">Text</div>
-              <a class="mini__v" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20Vehicle%3A%20(Year%20Make%20Model)%20%0AService%20needed%3A%20%0AIdeal%20date%2Ftime%3A%20">
-                Send a message
-              </a>
-            </div>
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
 
-            <div class="mini">
-              <div class="mini__k">Address</div>
-              <div class="mini__v">7696 FM539, Sutherland Springs, TX 78161</div>
-            </div>
-
-            <div class="mini">
-              <div class="mini__k">Hours</div>
-              <div class="mini__v">
-                Sun: Closed<br />
-                Mon–Fri: 8:00 AM – 5:00 PM<br />
-                Sat: 8:00 AM – 6:00 PM
-              </div>
-            </div>
-          </div>
-
-          <div class="contact__actions">
-            <a class="btn btn--primary btn--lg" href="tel:+18159551895">Call Now</a>
-            <a class="btn btn--ghost btn--lg" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20Vehicle%3A%20(Year%20Make%20Model)%20%0AService%20needed%3A%20%0AIdeal%20date%2Ftime%3A%20">Text Us</a>
-            <a class="btn btn--soft btn--lg" target="_blank" rel="noopener"
-               href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX%2078161">
-              Get Directions
-            </a>
-          </div>
-        </div>
-
-        <div class="contact__right">
-          <div class="map">
-            <iframe
-              title="Kambo Kustoms map"
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-              src="https://www.google.com/maps?q=Kambo%20Kustoms%207696%20FM539%20Sutherland%20Springs%20TX%2078161&output=embed">
-            </iframe>
-          </div>
-
-          <div class="note">
-            <div class="note__title">Want this to bring in more calls?</div>
-            <ul>
-              <li>Add a “Request Quote” form (optional)</li>
-              <li>Add before/after galleries</li>
-              <li>Add “Featured Builds” section</li>
-              <li>Connect domain: <span class="mono">kambokustoms.com</span> (if available)</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="wrap footer__inner">
-        <div class="footer__left">
-          <div class="brand brand--small">
-            <div class="brand__mark" aria-hidden="true">KK</div>
-            <div class="brand__text">
-              <div class="brand__name">Kambo Kustoms</div>
-              <div class="brand__tag">Mild to Wild</div>
-            </div>
-          </div>
-          <div class="footer__meta">
-            <span id="year"></span> © Kambo Kustoms • Sutherland Springs, TX
-          </div>
-        </div>
-
-        <div class="footer__right">
-          <a href="#top">Back to top ↑</a>
-        </div>
-      </div>
-    </footer>
-  </main>
-
-  <!-- Mobile Sticky CTA -->
-  <div class="sticky">
-    <a class="sticky__btn sticky__btn--call" href="tel:+18159551895">Call</a>
-    <a class="sticky__btn sticky__btn--text" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20Vehicle%3A%20(Year%20Make%20Model)%20%0AService%20needed%3A%20%0AIdeal%20date%2Ftime%3A%20">Text</a>
-    <a class="sticky__btn sticky__btn--dir" target="_blank" rel="noopener"
-       href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX%2078161">Directions</a>
-  </div>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  // Preview behavior: turn form into pre-filled SMS
+  function handleQuote(e){
+    e.preventDefault();
+    const fd = new FormData(e.target);
+    const msg =
+`Hi Kambo Kustoms — Quote Request:
+Name: ${fd.get("name")}
+Phone: ${fd.get("phone")}
+Vehicle: ${fd.get("vehicle")}
+Service: ${fd.get("service")}
+Details: ${fd.get("details")}`;
+    const url = "sms:+18159551895?&body=" + encodeURIComponent(msg);
+    window.location.href = url;
+    return false;
+  }
+</script>
 </body>
 </html>
