@@ -1,143 +1,75 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kambo Kustoms | Custom Truck Builds & Auto Repair</title>
-  <meta name="description" content="Custom truck builds and auto repair in Sutherland Springs, TX. Mild to Wild. Call or text for service." />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css" />
-</head>
+// script.js
 
-<body>
-<header class="header">
-  <div class="wrap header__inner">
-    <div class="logo">
-      <div class="logo__mark">KK</div>
-      <div>
-        <div class="logo__name">Kambo Kustoms</div>
-        <div class="logo__tag">Mild to Wild</div>
-      </div>
-    </div>
-    <nav class="nav">
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <a class="btn btn--primary" href="tel:+18159551895">Call Now</a>
-  </div>
-</header>
+// Year in footer
+const yearEl = document.getElementById("year");
+if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-<section class="hero">
-  <div class="wrap hero__grid">
-    <div>
-      <h1>Custom Truck Builds & Auto Repair</h1>
-      <p class="lead">
-        Award-winning custom work and reliable auto repair in Sutherland Springs, TX.
-        Built right. Built clean.
-      </p>
-      <div class="hero__actions">
-        <a class="btn btn--primary btn--lg" href="tel:+18159551895">Call (815) 955-1895</a>
-        <a class="btn btn--ghost btn--lg" href="sms:+18159551895">Text Us</a>
-      </div>
-      <div class="hero__meta">
-        <span>📍 7696 FM539, Sutherland Springs, TX</span>
-        <span>🕒 Mon–Fri 8–5 • Sat 8–6</span>
-      </div>
-    </div>
-    <div class="hero__image">
-      <div class="placeholder">Featured Build Photo</div>
-    </div>
-  </div>
-</section>
+// Smooth scroll for in-page anchors (nice feel on mobile)
+document.addEventListener("click", (e) => {
+  const a = e.target.closest('a[href^="#"]');
+  if (!a) return;
 
-<section id="services" class="section">
-  <div class="wrap">
-    <h2>Services</h2>
-    <div class="cards">
-      <div class="card">
-        <h3>Custom Builds</h3>
-        <p>Lift kits, suspension, and custom truck builds — mild to wild.</p>
-      </div>
-      <div class="card">
-        <h3>Steering & Suspension</h3>
-        <p>Ride quality, handling, and front-end repair.</p>
-      </div>
-      <div class="card">
-        <h3>Engine Diagnostics</h3>
-        <p>Check-engine lights, performance, and electrical issues.</p>
-      </div>
-      <div class="card">
-        <h3>Brakes & Safety</h3>
-        <p>Pads, rotors, inspections, and safety checks.</p>
-      </div>
-      <div class="card">
-        <h3>AC & Cooling</h3>
-        <p>AC diagnostics and cooling system service.</p>
-      </div>
-      <div class="card">
-        <h3>Maintenance</h3>
-        <p>Oil changes, batteries, and filters.</p>
-      </div>
-    </div>
-  </div>
-</section>
+  const id = a.getAttribute("href");
+  if (!id || id === "#") return;
 
-<section id="gallery" class="section section--dark">
-  <div class="wrap">
-    <h2>Gallery</h2>
-    <div class="gallery">
-      <div class="placeholder">Build Photo</div>
-      <div class="placeholder">Shop Photo</div>
-      <div class="placeholder">Truck Photo</div>
-      <div class="placeholder">Custom Detail</div>
-    </div>
-  </div>
-</section>
+  const target = document.querySelector(id);
+  if (!target) return;
 
-<section id="contact" class="section">
-  <div class="wrap contact">
-    <div>
-      <h2>Contact</h2>
-      <p>Call or text for quotes and availability.</p>
-      <div class="contact__info">
-        <p><strong>Phone:</strong> <a href="tel:+18159551895">(815) 955-1895</a></p>
-        <p><strong>Address:</strong> 7696 FM539, Sutherland Springs, TX 78161</p>
-      </div>
-      <div class="contact__actions">
-        <a class="btn btn--primary" href="tel:+18159551895">Call Now</a>
-        <a class="btn btn--ghost" href="sms:+18159551895">Text Us</a>
-      </div>
-    </div>
-    <div class="map">
-      <iframe
-        loading="lazy"
-        src="https://www.google.com/maps?q=Kambo%20Kustoms%207696%20FM539%20Sutherland%20Springs%20TX&output=embed">
-      </iframe>
-    </div>
-  </div>
-</section>
+  e.preventDefault();
+  target.scrollIntoView({ behavior: "smooth", block: "start" });
 
-<footer class="footer">
-  <div class="wrap footer__inner">
-    <span>© <span id="year"></span> Kambo Kustoms</span>
-    <a href="#top">Back to top ↑</a>
-  </div>
-</footer>
+  // If on mobile, close any open focus states nicely
+  if (document.activeElement) document.activeElement.blur();
+});
 
-<div class="sticky">
-  <a href="tel:+18159551895">Call</a>
-  <a href="sms:+18159551895">Text</a>
-  <a target="_blank"
-     href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX">
-     Directions
-  </a>
-</div>
+// Request-a-Quote (preview): convert form submission into a pre-filled SMS
+// If you later want email delivery, swap this for a backend endpoint (Cloudflare Worker, Formspree, etc.)
+window.handleQuote = function handleQuote(e) {
+  e.preventDefault();
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-</body>
-</html>
+  const form = e.target;
+  const fd = new FormData(form);
+
+  const name = (fd.get("name") || "").toString().trim();
+  const phone = (fd.get("phone") || "").toString().trim();
+  const vehicle = (fd.get("vehicle") || "").toString().trim();
+  const service = (fd.get("service") || "").toString().trim();
+  const details = (fd.get("details") || "").toString().trim();
+
+  const msg =
+`Hi Kambo Kustoms — Quote Request
+Name: ${name}
+Phone: ${phone}
+Vehicle: ${vehicle}
+Service: ${service}
+Details: ${details}`;
+
+  // iOS/Android differences: keep it simple
+  const smsUrl = "sms:+18159551895?&body=" + encodeURIComponent(msg);
+  window.location.href = smsUrl;
+
+  return false;
+};
+
+// Optional: light phone formatting while typing (US format)
+// Only runs if the input exists and is not already formatted.
+(() => {
+  const phoneInput = document.querySelector('input[name="phone"]');
+  if (!phoneInput) return;
+
+  const format = (v) => {
+    const digits = (v || "").replace(/\D/g, "").slice(0, 10);
+    const a = digits.slice(0, 3);
+    const b = digits.slice(3, 6);
+    const c = digits.slice(6, 10);
+    if (digits.length <= 3) return a;
+    if (digits.length <= 6) return `(${a}) ${b}`;
+    return `(${a}) ${b}-${c}`;
+  };
+
+  phoneInput.addEventListener("input", () => {
+    const cur = phoneInput.value;
+    const next = format(cur);
+    if (cur !== next) phoneInput.value = next;
+  });
+})();
