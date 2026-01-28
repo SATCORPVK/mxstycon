@@ -3,165 +3,151 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Mixed Style Conflict — Community Hub</title>
-  <meta name="description" content="Music • Faith • Positivity • Community. A simple hub to join LIVE sessions and find my links." />
-  <meta name="theme-color" content="#050610" />
+  <meta name="theme-color" content="#070A12" />
+  <title>Mixed Style Conflict — @mxstycon</title>
+  <meta name="description" content="Live Music • Real Conversation • Positive Energy — Follow • Watch • Vibe" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&family=JetBrains+Mono:wght@300;400;600&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-  <!-- Fullscreen animated stars (script.js draws here) -->
+  <!-- Ambient layers -->
   <canvas id="stars" aria-hidden="true"></canvas>
-
-  <!-- Nebula/vignette overlay -->
-  <div class="bg" aria-hidden="true"></div>
+  <div class="vignette" aria-hidden="true"></div>
+  <div class="noise" aria-hidden="true"></div>
 
   <main class="wrap">
-    <!-- Header / Hero -->
-    <header class="hero" role="banner">
-      <div class="avatar" aria-label="Profile photo">
-        <!-- Replace src with client image file (e.g., avatar.jpg) -->
-        <img src="avatar.jpg" alt="Mixed Style Conflict profile photo" />
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand__sig" aria-hidden="true"></span>
+        <span class="brand__txt">PULSE FEATURED CREATOR</span>
       </div>
 
-      <div class="hero__text">
-        <h1>Mixed Style Conflict</h1>
-        <p class="tagline">Music • Faith • Positivity • Community</p>
-
-        <div class="ctaRow">
-          <!-- Replace href with LIVE link (TikTok Live profile / live room / schedule link) -->
-          <a class="btn btn--primary" href="#" target="_blank" rel="noopener">
-            <span class="dot" aria-hidden="true"></span>
-            Join My LIVE
-          </a>
-
-          <!-- Replace href with preferred message link (TikTok DM not linkable; use IG DM, email, etc.) -->
-          <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
-            Message Me
-          </a>
-        </div>
-
-        <div class="micro">
-          <span class="pill">Disciple</span>
-          <span class="pill">Father</span>
-          <span class="pill">Musician</span>
-          <span class="pill">Veteran</span>
-        </div>
+      <div class="topbar__actions">
+        <button class="chip" id="copyLink" type="button" title="Copy page link">
+          <span class="chip__dot" aria-hidden="true"></span>
+          Copy Link
+        </button>
+        <button class="chip chip--ghost" id="toggleFX" type="button" title="Toggle effects">
+          FX: ON
+        </button>
       </div>
     </header>
 
-    <!-- Links -->
-    <section class="panel" aria-label="Links">
-      <h2 class="panel__title">Quick Links</h2>
+    <section class="hero card">
+      <div class="hero__glow" aria-hidden="true"></div>
 
-      <div class="grid">
-        <!-- Replace # with actual URLs -->
-        <a class="card" href="#" target="_blank" rel="noopener">
-          <div class="card__icon" aria-hidden="true">🎵</div>
-          <div class="card__body">
-            <div class="card__title">Listen to My Music</div>
-            <div class="card__sub">Spotify / Apple / YouTube</div>
-          </div>
-          <div class="card__chev" aria-hidden="true">›</div>
-        </a>
+      <div class="hero__row">
+        <div class="avatar" id="avatar" role="img" aria-label="Creator avatar"></div>
 
-        <a class="card" href="#" target="_blank" rel="noopener">
-          <div class="card__icon" aria-hidden="true">🔴</div>
-          <div class="card__body">
-            <div class="card__title">Go LIVE / Schedule</div>
-            <div class="card__sub">Catch the next session</div>
+        <div class="hero__meta">
+          <div class="kicker">
+            <span class="live">
+              <span class="live__dot" aria-hidden="true"></span>
+              <span class="live__txt" id="liveText">LIVE Pop-Up Host</span>
+            </span>
+            <span class="sep">•</span>
+            <span class="handle" id="handle">@mxstycon</span>
           </div>
-          <div class="card__chev" aria-hidden="true">›</div>
-        </a>
 
-        <a class="card" href="#" target="_blank" rel="noopener">
-          <div class="card__icon" aria-hidden="true">📱</div>
-          <div class="card__body">
-            <div class="card__title">TikTok</div>
-            <div class="card__sub">@mxstycon</div>
-          </div>
-          <div class="card__chev" aria-hidden="true">›</div>
-        </a>
+          <h1 class="title" id="displayName">Mixed Style Conflict</h1>
 
-        <a class="card" href="#" target="_blank" rel="noopener">
-          <div class="card__icon" aria-hidden="true">📸</div>
-          <div class="card__body">
-            <div class="card__title">Instagram</div>
-            <div class="card__sub">Clips + updates</div>
-          </div>
-          <div class="card__chev" aria-hidden="true">›</div>
-        </a>
+          <p class="tagline" id="tagline">
+            Together, we can change the world thru love, kindness & our actions.
+            <span class="tagline__em">Quality over Quantity.</span>
+          </p>
 
-        <a class="card" href="#" target="_blank" rel="noopener">
-          <div class="card__icon" aria-hidden="true">🎥</div>
-          <div class="card__body">
-            <div class="card__title">YouTube</div>
-            <div class="card__sub">Full performances</div>
+          <div class="pillrow" id="pillrow">
+            <!-- pills injected -->
           </div>
-          <div class="card__chev" aria-hidden="true">›</div>
-        </a>
 
-        <a class="card" href="#" target="_blank" rel="noopener">
-          <div class="card__icon" aria-hidden="true">🎁</div>
-          <div class="card__body">
-            <div class="card__title">Support / Tips</div>
-            <div class="card__sub">If you want to help</div>
+          <div class="cta">
+            <a class="btn btn--primary" id="primaryCta" href="#" target="_blank" rel="noopener">
+              <span class="btn__icon" aria-hidden="true">▶</span>
+              Follow • Watch • Vibe
+            </a>
+
+            <button class="btn btn--secondary" id="messageBtn" type="button">
+              <span class="btn__icon" aria-hidden="true">✦</span>
+              Send a Message
+            </button>
           </div>
-          <div class="card__chev" aria-hidden="true">›</div>
-        </a>
+        </div>
       </div>
 
-      <div class="note">
-        <span class="note__icon" aria-hidden="true">✨</span>
-        <p><strong>Quality over Quantity.</strong> Thank you for being here.</p>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="panel" aria-label="About">
-      <h2 class="panel__title">About Me</h2>
-
-      <div class="about">
-        <p>
-          Together, we can change the world through love, kindness &amp; our actions.
-          I’m just an incredibly blessed individual — far from perfect, but full of love!
-        </p>
-
-        <div class="about__row">
-          <div class="aboutCard">
-            <div class="aboutCard__kicker">What to expect</div>
-            <ul class="aboutCard__list">
-              <li>🎶 Music &amp; live performances</li>
-              <li>💬 Conversation &amp; community</li>
-              <li>🙌 Positivity &amp; encouragement</li>
-            </ul>
-          </div>
-
-          <div class="aboutCard">
-            <div class="aboutCard__kicker">Get notified</div>
-            <p class="aboutCard__text">
-              Want a heads-up when I go LIVE?
-            </p>
-            <!-- Replace href with an email signup, Discord invite, IG channel, etc. -->
-            <a class="btn btn--small" href="#" target="_blank" rel="noopener">🔔 Notify Me</a>
-            <p class="fineprint">Optional: link to Discord, email list, or IG broadcast channel.</p>
-          </div>
+      <div class="hero__footer">
+        <div class="stat">
+          <div class="stat__label">Tap Energy</div>
+          <div class="stat__value" id="tapEnergy">—</div>
+        </div>
+        <div class="stat">
+          <div class="stat__label">Total Clicks</div>
+          <div class="stat__value" id="totalClicks">0</div>
+        </div>
+        <div class="stat">
+          <div class="stat__label">Last Updated</div>
+          <div class="stat__value" id="lastUpdated">—</div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="footer__line"></div>
-      <p>© <span id="year"></span> Mixed Style Conflict — Built with love.</p>
-      <p class="footer__mini">Smiles all around :)</p>
+    <section class="links">
+      <div class="sectionHead">
+        <h2 class="sectionTitle">Links</h2>
+        <p class="sectionSub">Clean. Fast. Premium. Tap anything below.</p>
+      </div>
+
+      <div class="grid" id="linkGrid" aria-live="polite">
+        <!-- cards injected -->
+      </div>
+
+      <div class="divider"></div>
+
+      <section class="mini card">
+        <div class="mini__left">
+          <h3 class="mini__title">Book a Pop-Up Live Session</h3>
+          <p class="mini__sub">Music • Conversation • Positivity — private invite link or schedule page.</p>
+        </div>
+        <a class="btn btn--primary btn--small" id="bookBtn" href="#" target="_blank" rel="noopener">
+          Request Invite
+        </a>
+      </section>
+    </section>
+
+    <footer class="foot">
+      <div class="foot__wave" aria-hidden="true">
+        <canvas id="wave"></canvas>
+      </div>
+      <div class="foot__meta">
+        <span class="mono">Built for</span> <strong id="footName">Mixed Style Conflict</strong>
+        <span class="dot">•</span>
+        <span class="mono" id="footHandle">@mxstycon</span>
+      </div>
     </footer>
   </main>
 
-  <!-- Use external JS (includes year + stars + link wiring) -->
+  <!-- Modal -->
+  <div class="modal" id="modal" aria-hidden="true">
+    <div class="modal__backdrop" data-close="1"></div>
+    <div class="modal__panel" role="dialog" aria-modal="true" aria-label="Message options">
+      <div class="modal__head">
+        <div>
+          <div class="modal__title">Send a message</div>
+          <div class="modal__sub">Pick a method.</div>
+        </div>
+        <button class="iconbtn" data-close="1" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal__body" id="modalBody">
+        <!-- injected -->
+      </div>
+    </div>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
