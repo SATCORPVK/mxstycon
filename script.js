@@ -1,75 +1,80 @@
+// Mixed Style Conflict — Community Hub
 // script.js
 
-// Year in footer
-const yearEl = document.getElementById("year");
-if (yearEl) yearEl.textContent = new Date().getFullYear();
-
-// Smooth scroll for in-page anchors (nice feel on mobile)
-document.addEventListener("click", (e) => {
-  const a = e.target.closest('a[href^="#"]');
-  if (!a) return;
-
-  const id = a.getAttribute("href");
-  if (!id || id === "#") return;
-
-  const target = document.querySelector(id);
-  if (!target) return;
-
-  e.preventDefault();
-  target.scrollIntoView({ behavior: "smooth", block: "start" });
-
-  // If on mobile, close any open focus states nicely
-  if (document.activeElement) document.activeElement.blur();
-});
-
-// Request-a-Quote (preview): convert form submission into a pre-filled SMS
-// If you later want email delivery, swap this for a backend endpoint (Cloudflare Worker, Formspree, etc.)
-window.handleQuote = function handleQuote(e) {
-  e.preventDefault();
-
-  const form = e.target;
-  const fd = new FormData(form);
-
-  const name = (fd.get("name") || "").toString().trim();
-  const phone = (fd.get("phone") || "").toString().trim();
-  const vehicle = (fd.get("vehicle") || "").toString().trim();
-  const service = (fd.get("service") || "").toString().trim();
-  const details = (fd.get("details") || "").toString().trim();
-
-  const msg =
-`Hi Kambo Kustoms — Quote Request
-Name: ${name}
-Phone: ${phone}
-Vehicle: ${vehicle}
-Service: ${service}
-Details: ${details}`;
-
-  // iOS/Android differences: keep it simple
-  const smsUrl = "sms:+18159551895?&body=" + encodeURIComponent(msg);
-  window.location.href = smsUrl;
-
-  return false;
-};
-
-// Optional: light phone formatting while typing (US format)
-// Only runs if the input exists and is not already formatted.
 (() => {
-  const phoneInput = document.querySelector('input[name="phone"]');
-  if (!phoneInput) return;
+  const $ = (sel, root = document) => root.querySelector(sel);
 
-  const format = (v) => {
-    const digits = (v || "").replace(/\D/g, "").slice(0, 10);
-    const a = digits.slice(0, 3);
-    const b = digits.slice(3, 6);
-    const c = digits.slice(6, 10);
-    if (digits.length <= 3) return a;
-    if (digits.length <= 6) return `(${a}) ${b}`;
-    return `(${a}) ${b}-${c}`;
+  // Year
+  const yearEl = $("#year");
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  // Optional: set these right here, no code changes elsewhere.
+  // Just paste URLs and the page updates automatically.
+  const LINKS = {
+    live: "#",        // e.g. "https://www.tiktok.com/@mxstycon/live"
+    message: "#",     // e.g. "mailto:hello@..." or "https://instagram.com/..."
+    music: "#",       // Spotify/Apple/Link hub
+    schedule: "#",    // Schedule/Live page
+    tiktok: "#",      // https://www.tiktok.com/@mxstycon
+    instagram: "#",   // https://www.instagram.com/...
+    youtube: "#",     // https://www.youtube.com/@...
+    support: "#",     // CashApp/PayPal/Ko-fi/etc
+    notify: "#",      // Email signup / Discord invite / IG channel
   };
 
-  phoneInput.addEventListener("input", () => {
-    const cur = phoneInput.value;
-    const next = format(cur);
-    if (cur !== next) phoneInput.value = next;
+  // Wire links if elements exist (safe if you delete sections)
+  // HERO buttons
+  const liveBtn = $(".btn--primary");
+  if (liveBtn && LINKS.live !== "#") liveBtn.href = LINKS.live;
+
+  const ghostBtns = document.querySelectorAll(".btn--ghost");
+  if (ghostBtns.length && LINKS.message !== "#") {
+    ghostBtns.forEach((b) => (b.href = LINKS.message));
+  }
+
+  // Cards (in order)
+  const cards = Array.from(document.querySelectorAll(".grid .card"));
+
+  const setCard = (idx, href) => {
+    const el = cards[idx];
+    if (!el) return;
+    if (href && href !== "#") el.href = href;
+  };
+
+  // Match the order in index.html:
+  // 0 Music, 1 LIVE/Schedule, 2 TikTok, 3 IG, 4 YouTube, 5 Support
+  setCard(0, LINKS.music);
+  setCard(1, LINKS.schedule);
+  setCard(2, LINKS.tiktok);
+  setCard(3, LINKS.instagram);
+  setCard(4, LINKS.youtube);
+  setCard(5, LINKS.support);
+
+  // Notify button
+  const notifyBtn = Array.from(document.querySelectorAll(".btn"))
+    .find((b) => (b.textContent || "").toLowerCase().includes("notify"));
+  if (notifyBtn && LINKS.notify !== "#") notifyBtn.href = LINKS.notify;
+
+  // Smooth scroll for any on-page anchors like #about if you add them
+  document.addEventListener("click", (e) => {
+    const a = e.target.closest("a[href^='#']");
+    if (!a) return;
+
+    const id = a.getAttribute("href");
+    if (!id || id === "#") return;
+
+    const target = document.querySelector(id);
+    if (!target) return;
+
+    e.preventDefault();
+    target.scrollIntoView({ behavior: "smooth", block: "start" });
+  });
+
+  // Tiny tap feedback (mobile): add a pressed class quickly
+  const pressables = document.querySelectorAll(".btn, .card");
+  pressables.forEach((el) => {
+    el.addEventListener("touchstart", () => el.classList.add("is-pressed"), { passive: true });
+    el.addEventListener("touchend", () => el.classList.remove("is-pressed"));
+    el.addEventListener("touchcancel", () => el.classList.remove("is-pressed"));
   });
 })();
