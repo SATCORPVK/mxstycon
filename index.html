@@ -1,365 +1,167 @@
-<!-- index.html -->
+
 <!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Kambo Kustoms | Custom Truck Builds & Auto Repair</title>
-  <meta name="description" content="Custom truck builds and auto repair in Sutherland Springs, TX. Mild to Wild. Call, text, or request a quote." />
-  <meta name="theme-color" content="#07090c" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Mixed Style Conflict — Community Hub</title>
+  <meta name="description" content="Music • Faith • Positivity • Community. A simple hub to join LIVE sessions and find my links." />
+  <meta name="theme-color" content="#f3efe6" />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=DM+Sans:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body>
-<header class="header" id="top">
-  <div class="wrap header__inner">
-    <div class="logo">
-      <div class="logo__text">
-        <div class="logo__name">Kambo Kustoms</div>
-        <div class="logo__tag">Custom Truck Builds • Auto Repair • Mild to Wild</div>
-      </div>
-    </div>
+  <!-- Background texture / subtle glow -->
+  <div class="bg" aria-hidden="true"></div>
 
-    <nav class="nav" aria-label="Primary">
-      <a href="#services">Services</a>
-      <a href="#gallery">Gallery</a>
-      <a href="#quote">Request a Quote</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-    <div class="header__cta">
-      <a class="btn btn--ghost" href="sms:+18159551895">Text</a>
-      <a class="btn btn--primary" href="tel:+18159551895">Call</a>
-    </div>
-  </div>
-</header>
-
-<main>
-  <!-- HERO -->
-  <section class="hero">
-    <div class="wrap hero__grid">
-      <div class="hero__copy">
-        <div class="chip">
-          <span class="chip__dot" aria-hidden="true"></span>
-          <span>Sutherland Springs, TX • Mon–Fri 8–5 • Sat 8–6</span>
-        </div>
-
-        <h1>
-          Built <span class="accent">Mild to Wild</span>.<br />
-          Trucks, customs, and repairs done right.
-        </h1>
-
-        <p class="lead">
-          Custom builds, suspension, steering, diagnostics, brakes, AC and more.
-          Fast communication. Clean work. No nonsense.
-        </p>
-
-        <div class="hero__actions">
-          <a class="btn btn--primary btn--lg" href="tel:+18159551895">Call (815) 955-1895</a>
-          <a class="btn btn--ghost btn--lg" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20Vehicle%3A%20(Year%20Make%20Model)%20%0AService%3A%20%0ADetails%3A%20">Text Us</a>
-          <a class="btn btn--soft btn--lg" href="#quote">Request a Quote</a>
-        </div>
-
-        <div class="hero__meta">
-          <div class="metaCard">
-            <div class="metaCard__k">Address</div>
-            <div class="metaCard__v">7696 FM539, Sutherland Springs, TX 78161</div>
-          </div>
-          <div class="metaCard">
-            <div class="metaCard__k">Shop Focus</div>
-            <div class="metaCard__v">Custom builds • Lift kits • Suspension • Diagnostics</div>
-          </div>
-        </div>
+  <main class="wrap">
+    <!-- Header / Hero -->
+    <header class="hero" role="banner">
+      <div class="avatar" aria-label="Profile photo">
+        <!-- Replace src with client image file (e.g., avatar.jpg) -->
+        <img src="avatar.jpg" alt="Mixed Style Conflict profile photo" />
       </div>
 
-      <div class="hero__media">
-        <div class="mediaFrame">
-          <div class="mediaFrame__top">
-            <span class="pulseDot" aria-hidden="true"></span>
-            <span class="mono">FEATURED BUILDS</span>
-          </div>
-          <div class="mediaGrid" aria-label="Photo placeholders">
-            <div class="ph ph--tall">Truck on lift</div>
-            <div class="ph">Custom wheels</div>
-            <div class="ph">Shop bay</div>
-            <div class="ph">Detail work</div>
-          </div>
-          <div class="mediaFrame__hint">Swap these with real Google photos in 5 minutes.</div>
-        </div>
-      </div>
-    </div>
-  </section>
+      <div class="hero__text">
+        <h1>Mixed Style Conflict</h1>
+        <p class="tagline">Music • Faith • Positivity • Community</p>
 
-  <!-- SERVICES -->
-  <section id="services" class="section">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>Services</h2>
-        <p>Don’t see it listed? Ask — custom work is what we do.</p>
-      </div>
+        <div class="ctaRow">
+          <!-- Replace href with LIVE link (TikTok Live profile / live room / schedule link) -->
+          <a class="btn btn--primary" href="#" target="_blank" rel="noopener">
+            <span class="dot" aria-hidden="true"></span>
+            Join My LIVE
+          </a>
 
-      <div class="cards">
-        <article class="card">
-          <h3>Custom Builds</h3>
-          <p>Vision-to-reality upgrades, mild to wild builds, and custom solutions.</p>
-          <ul>
-            <li>Lift kits & suspension</li>
-            <li>Fitment guidance</li>
-            <li>Custom fabrication / installs (as quoted)</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Steering & Suspension</h3>
-          <p>Ride quality, handling, and front-end stability.</p>
-          <ul>
-            <li>Ball joints / tie rods</li>
-            <li>Shocks / struts</li>
-            <li>Front-end checks</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Engine Diagnostics</h3>
-          <p>Find the problem fast. Fix it right.</p>
-          <ul>
-            <li>Check-engine lights</li>
-            <li>Performance issues</li>
-            <li>Electrical troubleshooting</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Brakes & Safety</h3>
-          <p>Stopping power you can trust.</p>
-          <ul>
-            <li>Pads / rotors</li>
-            <li>Brake checks</li>
-            <li>Safety inspection</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>AC & Cooling</h3>
-          <p>Texas-heat ready service.</p>
-          <ul>
-            <li>AC diagnosis</li>
-            <li>Recharge / leaks</li>
-            <li>Cooling system checks</li>
-          </ul>
-        </article>
-
-        <article class="card">
-          <h3>Maintenance</h3>
-          <p>Basic upkeep for long-term reliability.</p>
-          <ul>
-            <li>Oil changes</li>
-            <li>Batteries</li>
-            <li>Air & cabin filters</li>
-          </ul>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- GALLERY -->
-  <section id="gallery" class="section section--dark">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>Gallery</h2>
-        <p>Real builds, real results. (Replace with your best photos.)</p>
-      </div>
-
-      <div class="masonry">
-        <div class="tile tile--lg">Featured truck</div>
-        <div class="tile">Custom detail</div>
-        <div class="tile">Shop bay</div>
-        <div class="tile">Lift kit</div>
-        <div class="tile tile--wide">Before / After</div>
-        <div class="tile">Wheels</div>
-      </div>
-
-      <div class="center">
-        <a class="btn btn--soft" target="_blank" rel="noopener"
-           href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX">
-          View photos on Google
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- REQUEST A QUOTE -->
-  <section id="quote" class="section">
-    <div class="wrap">
-      <div class="section__head">
-        <h2>Request a Quote</h2>
-        <p>Fill this out and we’ll reach back out. (For the preview site, this can email/text you later.)</p>
-      </div>
-
-      <div class="quoteGrid">
-        <form class="form" action="#" method="post" onsubmit="return handleQuote(event)">
-          <div class="form__row">
-            <label>
-              Name
-              <input required name="name" autocomplete="name" placeholder="Your name" />
-            </label>
-            <label>
-              Phone
-              <input required name="phone" inputmode="tel" autocomplete="tel" placeholder="(###) ###-####" />
-            </label>
-          </div>
-
-          <div class="form__row">
-            <label>
-              Vehicle (Year / Make / Model)
-              <input required name="vehicle" placeholder="2015 Chevy Silverado" />
-            </label>
-          </div>
-
-          <div class="form__row">
-            <label>
-              Service Needed
-              <select required name="service">
-                <option value="" selected disabled>Select a service</option>
-                <option>Custom Build</option>
-                <option>Lift Kit / Suspension</option>
-                <option>Steering & Suspension Repair</option>
-                <option>Engine Diagnostics</option>
-                <option>Brakes</option>
-                <option>AC / Cooling</option>
-                <option>Maintenance</option>
-                <option>Other</option>
-              </select>
-            </label>
-          </div>
-
-          <div class="form__row">
-            <label>
-              Details
-              <textarea required name="details" rows="5" placeholder="Tell us what’s going on, what you want done, and any timeframe."></textarea>
-            </label>
-          </div>
-
-          <div class="form__row form__row--actions">
-            <button class="btn btn--primary" type="submit">Send Request</button>
-            <a class="btn btn--ghost" href="sms:+18159551895?&body=Hi%20Kambo%20Kustoms%20—%20Name%3A%20%0AVehicle%3A%20(Year%20Make%20Model)%20%0AService%3A%20%0ADetails%3A%20">
-              Or text this instead
-            </a>
-          </div>
-
-          <p class="form__note">
-            For launch: connect this form to email or a simple inbox. For now it opens a pre-filled text message.
-          </p>
-        </form>
-
-        <aside class="panel">
-          <div class="panel__title">Fastest way to get a quote</div>
-          <ol class="panel__steps">
-            <li>Send Year/Make/Model</li>
-            <li>Tell us the service you want</li>
-            <li>Share photos if you have them</li>
-          </ol>
-          <div class="panel__cta">
-            <a class="btn btn--soft" href="tel:+18159551895">Call</a>
-            <a class="btn btn--ghost" href="sms:+18159551895">Text</a>
-          </div>
-          <div class="panel__fine mono">Mon–Fri 8–5 • Sat 8–6</div>
-        </aside>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <section id="contact" class="section section--dark">
-    <div class="wrap contact">
-      <div class="contact__left">
-        <h2>Contact</h2>
-        <p class="lead">Call, text, or request a quote. We’ll get you squared away.</p>
-
-        <div class="contact__cards">
-          <div class="mini">
-            <div class="mini__k">Phone</div>
-            <a class="mini__v" href="tel:+18159551895">(815) 955-1895</a>
-          </div>
-          <div class="mini">
-            <div class="mini__k">Address</div>
-            <div class="mini__v">7696 FM539, Sutherland Springs, TX 78161</div>
-          </div>
-          <div class="mini">
-            <div class="mini__k">Hours</div>
-            <div class="mini__v">Mon–Fri 8–5 • Sat 8–6 • Sun Closed</div>
-          </div>
-        </div>
-
-        <div class="contact__actions">
-          <a class="btn btn--primary btn--lg" href="tel:+18159551895">Call Now</a>
-          <a class="btn btn--ghost btn--lg" href="sms:+18159551895">Text Us</a>
-          <a class="btn btn--soft btn--lg" target="_blank" rel="noopener"
-             href="https://www.google.com/maps/search/?api=1&query=Kambo%20Kustoms%2C%207696%20FM539%2C%20Sutherland%20Springs%2C%20TX">
-            Directions
+          <!-- Replace href with preferred message link (TikTok DM not linkable; use IG DM, email, etc.) -->
+          <a class="btn btn--ghost" href="#" target="_blank" rel="noopener">
+            Message Me
           </a>
         </div>
-      </div>
 
-      <div class="contact__right">
-        <div class="map">
-          <iframe
-            title="Kambo Kustoms map"
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Kambo%20Kustoms%207696%20FM539%20Sutherland%20Springs%20TX%2078161&output=embed">
-          </iframe>
-        </div>
-
-        <div class="note">
-          <div class="note__title">Launch upgrades (optional)</div>
-          <ul>
-            <li>Domain + email routing</li>
-            <li>Photo gallery + featured builds</li>
-            <li>Quote form → email inbox / CRM</li>
-            <li>SEO basics (service areas + keywords)</li>
-          </ul>
+        <div class="micro">
+          <span class="pill">Disciple</span>
+          <span class="pill">Father</span>
+          <span class="pill">Musician</span>
+          <span class="pill">Veteran</span>
         </div>
       </div>
-    </div>
-  </section>
+    </header>
 
-  <footer class="footer">
-    <div class="wrap footer__inner">
-      <span>© <span id="year"></span> Kambo Kustoms</span>
-      <a href="#top" class="mono">Back to top ↑</a>
-    </div>
-  </footer>
-</main>
+    <!-- Links -->
+    <section class="panel" aria-label="Links">
+      <h2 class="panel__title">Quick Links</h2>
 
-<!-- Sticky mobile CTA -->
-<div class="sticky" aria-label="Quick actions">
-  <a class="sticky__btn sticky__btn--call" href="tel:+18159551895">Call</a>
-  <a class="sticky__btn sticky__btn--text" href="sms:+18159551895">Text</a>
-  <a class="sticky__btn sticky__btn--quote" href="#quote">Quote</a>
-</div>
+      <div class="grid">
+        <!-- Replace # with actual URLs -->
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <div class="card__icon" aria-hidden="true">🎵</div>
+          <div class="card__body">
+            <div class="card__title">Listen to My Music</div>
+            <div class="card__sub">Spotify / Apple / YouTube</div>
+          </div>
+          <div class="card__chev" aria-hidden="true">›</div>
+        </a>
 
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <div class="card__icon" aria-hidden="true">🔴</div>
+          <div class="card__body">
+            <div class="card__title">Go LIVE / Schedule</div>
+            <div class="card__sub">Catch the next session</div>
+          </div>
+          <div class="card__chev" aria-hidden="true">›</div>
+        </a>
 
-  // Preview behavior: turn form into pre-filled SMS
-  function handleQuote(e){
-    e.preventDefault();
-    const fd = new FormData(e.target);
-    const msg =
-`Hi Kambo Kustoms — Quote Request:
-Name: ${fd.get("name")}
-Phone: ${fd.get("phone")}
-Vehicle: ${fd.get("vehicle")}
-Service: ${fd.get("service")}
-Details: ${fd.get("details")}`;
-    const url = "sms:+18159551895?&body=" + encodeURIComponent(msg);
-    window.location.href = url;
-    return false;
-  }
-</script>
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <div class="card__icon" aria-hidden="true">📱</div>
+          <div class="card__body">
+            <div class="card__title">TikTok</div>
+            <div class="card__sub">@mxstycon</div>
+          </div>
+          <div class="card__chev" aria-hidden="true">›</div>
+        </a>
+
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <div class="card__icon" aria-hidden="true">📸</div>
+          <div class="card__body">
+            <div class="card__title">Instagram</div>
+            <div class="card__sub">Clips + updates</div>
+          </div>
+          <div class="card__chev" aria-hidden="true">›</div>
+        </a>
+
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <div class="card__icon" aria-hidden="true">🎥</div>
+          <div class="card__body">
+            <div class="card__title">YouTube</div>
+            <div class="card__sub">Full performances</div>
+          </div>
+          <div class="card__chev" aria-hidden="true">›</div>
+        </a>
+
+        <a class="card" href="#" target="_blank" rel="noopener">
+          <div class="card__icon" aria-hidden="true">🎁</div>
+          <div class="card__body">
+            <div class="card__title">Support / Tips</div>
+            <div class="card__sub">If you want to help</div>
+          </div>
+          <div class="card__chev" aria-hidden="true">›</div>
+        </a>
+      </div>
+
+      <div class="note">
+        <span class="note__icon" aria-hidden="true">✨</span>
+        <p><strong>Quality over Quantity.</strong> Thank you for being here.</p>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="panel" aria-label="About">
+      <h2 class="panel__title">About Me</h2>
+
+      <div class="about">
+        <p>
+          Together, we can change the world through love, kindness &amp; our actions.
+          I’m just an incredibly blessed individual — far from perfect, but full of love!
+        </p>
+
+        <div class="about__row">
+          <div class="aboutCard">
+            <div class="aboutCard__kicker">What to expect</div>
+            <ul class="aboutCard__list">
+              <li>🎶 Music &amp; live performances</li>
+              <li>💬 Conversation &amp; community</li>
+              <li>🙌 Positivity &amp; encouragement</li>
+            </ul>
+          </div>
+
+          <div class="aboutCard">
+            <div class="aboutCard__kicker">Get notified</div>
+            <p class="aboutCard__text">
+              Want a heads-up when I go LIVE?
+            </p>
+            <!-- Replace href with an email signup, Discord invite, IG channel, etc. -->
+            <a class="btn btn--small" href="#" target="_blank" rel="noopener">🔔 Notify Me</a>
+            <p class="fineprint">Optional: link to Discord, email list, or IG broadcast channel.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer__line"></div>
+      <p>© <span id="year"></span> Mixed Style Conflict — Built with love.</p>
+      <p class="footer__mini">Smiles all around :)</p>
+    </footer>
+  </main>
+
+  <script>
+    // Tiny helper: year
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
